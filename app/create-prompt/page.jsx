@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
 import { useSession } from 'next-auth/react'; // to know which user is logged in
@@ -8,7 +8,7 @@ import Form from '@components/Form';
 const CreatePrompt = () => {
   const router = useRouter();
   const {data: session} = useSession();
-  
+
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: '',
