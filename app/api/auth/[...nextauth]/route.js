@@ -11,6 +11,9 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  // session: {
+  //   strategy: 'jwt',
+  //  },
 
   callbacks: {
     async session({ session }) {
@@ -29,11 +32,11 @@ const handler = NextAuth({
 
         // if not, create a new user in the database
         if (!userExists) {
-          // console.log(profile)
           await User.create({
             email: profile.email,
-            username: profile.name.replace(" ", "").toLowerCase(),
-            image: profile.picture,
+            // username: profile.name.replaceAll(" ", "").toLowerCase(),
+            username: profile.name.replace(/\s+/g,"").toLowerCase(),
+            image: profile.picture, //note: if user restricts profile image sharing in their google settings, picture does not exist
           });
         }
         return true;

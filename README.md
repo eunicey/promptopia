@@ -1,3 +1,7 @@
+https://www.youtube.com/watch?v=wm5gMKuwSYk
+https://github.com/adrianhajdin/project_next_13_ai_prompt_sharing/tree/main
+https://gist.github.com/adrianhajdin/6df61c6cd5ed052dce814a765bff9032
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
